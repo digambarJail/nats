@@ -1,10 +1,9 @@
 services:
-  - type: web
+  - type: background
     name: nats-server
     env: docker
     dockerfilePath: ./Dockerfile
     plan: free
-    healthCheckPath: /varz
     ports:
       - port: 4222
         protocol: tcp
