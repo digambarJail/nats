@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: nats-server
+    env: docker
+    dockerfilePath: ./Dockerfile
+    plan: free
+    healthCheckPath: /varz
+    ports:
+      - port: 4222
+        protocol: tcp
+      - port: 8222
+        protocol: tcp
+      - port: 6222
+        protocol: tcp 
